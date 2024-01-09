@@ -1,0 +1,72 @@
+
+.logo h4{
+    color: var(--color-active);
+    text-transform: capitalize;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    font-family: 'Caveat', cursive;
+    word-spacing: 2px;
+}
+.list-style{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--background-color-nav);
+    position: fixed;
+    z-index: 1002;
+}
+.item , .list, .item-list{
+display: flex;
+justify-content: center;
+padding: 10px;
+list-style: none;
+}
+.list-style li{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.list svg{
+    font-size: 25px;
+}
+.list-style a{
+    text-decoration: none;
+    color: var(--color-local);
+}
+.item-list a.active{
+    color : var(--color-active)
+}
+.list-style svg{
+    display: none;
+}
+@media (min-width : 125px) and (max-width : 1200px){
+ /* .list-style{
+ flex-direction: column; 
+ align-items: flex-start;
+} */
+.list-style svg{
+    display: block;
+    font-size: 25px;
+}
+ .item-list{
+flex-direction: column;
+    background: var(--background-color-nav);
+    width: 100%;
+    position: absolute;
+    /* top: 70px; */
+    top: -250px;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 1002;
+}
+.item-list.active{
+    top:70px
+}
+}
+
+ svg{
+    font-size: 25px;
+}
+.MuiBadge-badge{
+    top: 2px !important;
+}
